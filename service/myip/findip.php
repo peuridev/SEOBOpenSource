@@ -55,6 +55,12 @@ echo $json_a['country_name']['ko'];
 해당소스는 윈섭에서 운영중이며, 이 주석을 지울시 문제가 생길수있습니다.
 깃허브 다운로드 : https://github.com/ChangMun00/WinSub-IP
 -->
+<br>
+<div class="footer">
+    <div class="container">
+        © 2020. SEOB All rights reserved.
+    </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
