@@ -1,0 +1,33 @@
+.div1 {
+    background-color: #1E87F0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+    text-align: center;
+    font-family: 'TmoneyRoundWindExtraBold';
+}
+
+@font-face {
+    font-family: 'TmoneyRoundWindRegular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'TmoneyRoundWindRegular';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'TmoneyRoundWindRegular';
+}
+
+.card-title {
+    color: white;
+    font-family: 'TmoneyRoundWindExtraBold';
+}
+
+.light-title {
+    color: #32383E;
+    font-family: 'TmoneyRoundWindExtraBold';
+}
