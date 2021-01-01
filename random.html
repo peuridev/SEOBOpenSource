@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script>
+        window.addEventListener('load', init, false);
+        
+        function init(){
+          document.getElementById("calcButton").addEventListener("click", drawing, false);
+          
+            function drawing(event) {
+            event.preventDefault();
+            
+            var startNUM = parseInt(document.getElementById("startNUM").value);
+            var endNUM = parseInt(document.getElementById("endNUM").value);
+            var selectNum = parseInt(document.getElementById("selectNum").value);
+            
+                var numArray = new Array;
+                var randomNum;
+            
+                var overlappingFlag;
+            
+            if(startNUM > endNUM) {
+              alert("숫자 범위가 뒤바뀐 듯 합니다.");
+              
+              var tempNum = startNUM;
+              startNUM = endNUM;
+              endNUM = tempNum;
+            }
+            
+            var rangeNum = endNUM + 1 - startNUM;
+            if(rangeNum < selectNum) {
+              alert("입력된 숫자범위의 경우의 수보다 추출 숫자의 갯수가 커서 추출 숫자의 갯수를 " + rangeNum + "(으)로 제한합니다.");
+              selectNum = rangeNum;
+            }
+            
+            while(selectNum) {
+               randomNum = Math.floor(Math.random(1) * (endNUM + 1 - startNUM)) + startNUM;			
+        
+                    overlappingFlag = false;
+                    for(var a in numArray) {
+                        if(numArray[a] == randomNum) {
+                            overlappingFlag = true;
+                            break;
+                        }
+                    }
+                    if(!overlappingFlag) {
+                        numArray.push(randomNum);
+                        selectNum--;
+                    }
+                }
+        
+             numArray.sort(function (left, right) {
+              return left - right;
+            });
+        
+             document.getElementById("console").innerHTML = "&gt; 추첨 숫자 : " + numArray.join(", ");
+            }
+        }
+            </script>
+      <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
+        <link rel="stylesheet" href="main.css">
+        <title>랜덤 숫자 뽑기 - SEOB 섭</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+   <style>
+@font-face {
+    font-family: 'TmoneyRoundWindRegular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'TmoneyRoundWindRegular';
+}
+   </style>
+    </head>
+    <body>
+    <div class="div1">
+        <span style="font-family: 'TmoneyRoundWindExtraBold'; font-size: 40px;">랜덤 숫자 뽑기</span>
+        <br>
+        <span style="font-family: 'TmoneyRoundWindRegular';">랜덤으로 숫자들을 뽑을 수 있습니다.</span>
+    </div>
+    <div class="container">
+        <br>
+        <div id="wrapper">
+          <form name="randomNumber">
+        <div class="form-row">
+          <div class="col">
+            <input type="number" size="6" id="startNUM" value="1"  class="form-control" placeholder="처음 숫자">
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" id="endNUM" value="45"  placeholder="마지막 숫자">
+          </div>
+        </div>
+      </form>
+      <br>
+      <input class="form-control" type="number" size="6" id="selectNum" value="6" placeholder="숫자 갯수">
+      <br>
+      
+      <button type="button" id="calcButton" class="btn btn-primary btn-lg btn-block">추첨하기</button><br>
+      <div class="d-grid gap-2"></div>
+      
+          </p>
+          <div class="card">
+            <div class="card-body">
+            </form>
+            <div id="console" title="추첨하기를 누르면 여기에 결과가 나와요. (Result)">&gt;</div>
+      
+            </div>
+          </div>
+        </div>
+      
+      <!--
+       
+      Copyright (C) JaeHyuk Cho 
+      All rights reserved.
+      
+      --!>
+      
+</div>
+<br>
+<div class="footer">
+    <div class="container">
+        © 2020. SEOB All rights reserved.
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>
