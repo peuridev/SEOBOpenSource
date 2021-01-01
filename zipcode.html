@@ -27,6 +27,27 @@ body {
    </style>
     </head>
     <body>
+        <div class="mn2">
+            <div id="mysidenav" class="sidenav">
+              <a href="#" class="closebtn" onclick='closeNav()'>x</a>
+              <a href="https://seob.kro.kr">메인페이지</a>
+              <a href="https://kom-ma.kro.kr">KOM.MA (콤마)</a>
+              <a href="https://peuri.ga">프리 웹사이트</a>
+              <a href="#">소개</a>
+            </div>
+            <div class="container">
+              <br>
+            <span class="openmenu" onclick='openNav()'><i class="fas fa-bars fa-5" aria-hidden="true"></i> </span>
+          </div>
+            <script>
+              function openNav() {
+                document.getElementById('mysidenav').style.width = '250px';
+              }
+              function closeNav() {
+                document.getElementById('mysidenav').style.width = '0';
+              }
+            </script>
+      </div>
     <div class="div1">
         <span style="font-family: 'TmoneyRoundWindExtraBold'; font-size: 40px;">우편번호 조회</span>
         <br>

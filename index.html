@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
         <link rel="stylesheet" href="main.css">
         <title>SEOB 섭</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
    <style>
 @font-face {
@@ -27,11 +28,36 @@ body {
    </style>
     </head>
     <body>
-    <div class="div1">
+      <div class="mn2">
+      <div id="mysidenav" class="sidenav">
+        <a href="#" class="closebtn" onclick='closeNav()'>x</a>
+        <a href="https://seob.kro.kr">메인페이지</a>
+        <a href="https://kom-ma.kro.kr">KOM.MA (콤마)</a>
+        <a href="https://peuri.ga">프리 웹사이트</a>
+        <a href="#">소개</a>
+      </div>
+      <div class="container">
+        <br>
+      <span class="openmenu" onclick='openNav()'><i class="fas fa-bars fa-5" aria-hidden="true"></i> </span>
+    </div>
+      <script>
+        function openNav() {
+          document.getElementById('mysidenav').style.width = '250px';
+        }
+        function closeNav() {
+          document.getElementById('mysidenav').style.width = '0';
+        }
+      </script>
+</div>
+      <div class="div1">
+        
         <span style="font-family: 'TmoneyRoundWindExtraBold'; font-size: 40px;">SEOB 섭</span>
         <br>
         <span style="font-family: 'TmoneyRoundWindRegular';">반갑습니다!</span>
     </div>
+
+  
+
     <div class="container">
         <br>
         <div class="card-deck">
@@ -103,7 +129,7 @@ body {
                         <div class="card-body">
                           <h5 class="card-title">오늘의 첫화면</h5>
                           <p class="card-text">브라우저의 첫화면에 오늘의 날씨, 시간들을 표시해줍니다.</p>
-                          <button type="button" class="btn btn-outline-light">개발중</button>
+                          <button type="button" class="btn btn-outline-light">바로가기</button>
                         </div>
                       </div>
                 </li>
@@ -157,7 +183,6 @@ body {
                         </div>
                       </div>
                 </li>
-             
             </ul>
         
         </div>
