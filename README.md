@@ -18,7 +18,7 @@
 - 내폰 중고 시세 찾기
 
 ## 라이센스
-이 소스들은 GPL 라이센스에 따릅니다.
+- 이 소스들은 GPL 라이센스에 따릅니다.
 
 ## 오픈소스 사용
 - 창문님의 IP 불러오기 예제 : [레포 보기](https://github.com/search?p=2&q=winsub&type=Repositories)
